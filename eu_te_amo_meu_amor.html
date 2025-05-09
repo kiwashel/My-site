@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Eu Te Amo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.imgur.com/Qd4y1Qg.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            text-align: center;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: brightness(0.6);
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ffccff;
+            text-shadow: 2px 2px #000;
+        }
+
+        p {
+            font-size: 24px;
+            margin-top: 10px;
+            text-shadow: 1px 1px #000;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: #ff66b2;
+            color: white;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff3385;
+        }
+
+        .kiss {
+            position: absolute;
+            font-size: 32px;
+            animation: floatUp 2s ease-out forwards;
+        }
+
+        @keyframes floatUp {
+            0% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-150px); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Eu te amo, meu amor</h1>
+    <p>Você é o presente mais precioso que Deus me deu.</p>
+    <p>Que nosso amor continue crescendo todos os dias.</p>
+
+    <div class="music-player">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/reymuel-espino/lady-gaga-bruno-mars-die-with&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
+        </iframe>
+    </div>
+
+    <button onclick="mandarBeijo()">Mandar Beijo</button>
+
+    <script>
+        function mandarBeijo() {
+            const kiss = document.createElement('div');
+            kiss.className = 'kiss';
+            kiss.innerText = '💋';
+            kiss.style.left = Math.random() * 90 + '%';
+            kiss.style.top = '80%';
+            document.body.appendChild(kiss);
+            setTimeout(() => kiss.remove(), 2000);
+        }
+    </script>
+</body>
+</html>
